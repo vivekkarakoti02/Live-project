@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #0a0a0a;
+  --color-secondary-bg: #1a1a1a;
+  --color-card-bg: #141414;
+  --color-accent: #d4d4c1;
+  --color-accent-hover: #e0e0d0;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary-bg);
+    color: white;
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: white;
+  }
+
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl mb-6;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl mb-4;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-accent)] text-black uppercase font-semibold px-8 py-3 tracking-wider hover:bg-[var(--color-accent-hover)] transition-colors duration-300 cursor-pointer text-sm;
+  }
+
+  .btn-outline {
+    @apply border border-[#333] text-white uppercase font-semibold px-8 py-3 tracking-wider hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors duration-300 cursor-pointer bg-transparent text-sm;
+  }
+
+  .nav-link {
+    @apply text-[11px] uppercase tracking-[0.15em] font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors duration-300;
+  }
+
+  .nav-link.active {
+    @apply text-[var(--color-accent)];
+  }
+
+  .card {
+    @apply bg-[var(--color-card-bg)] border border-white/5 transition-colors duration-300;
+  }
+
+  .card:hover {
+    @apply border-[var(--color-accent)];
+  }
+}
