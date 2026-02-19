@@ -8,23 +8,37 @@
   --color-accent: #d4d4c1;
   --color-accent-hover: #e0e0d0;
   --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-primary: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.05);
   
   --font-sans: "Inter", sans-serif;
+}
+
+:root[data-theme="light"] {
+  --color-primary-bg: #ffffff;
+  --color-secondary-bg: #f5f5f5;
+  --color-card-bg: #ffffff;
+  --color-accent: #b0b0a0; /* Slightly darker for contrast on white */
+  --color-accent-hover: #a0a090;
+  --color-text-muted: rgba(0, 0, 0, 0.6);
+  --color-text-primary: #1a1a1a;
+  --color-border: rgba(0, 0, 0, 0.1);
 }
 
 @layer base {
   body {
     background-color: var(--color-primary-bg);
-    color: white;
+    color: var(--color-text-primary);
     font-family: var(--font-sans);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: white;
+    color: var(--color-text-primary);
   }
 
   h1 {
@@ -42,7 +56,7 @@
   }
 
   .btn-outline {
-    @apply border border-[#333] text-white uppercase font-semibold px-8 py-3 tracking-wider hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors duration-300 cursor-pointer bg-transparent text-sm;
+    @apply border border-[var(--color-border)] text-[var(--color-text-primary)] uppercase font-semibold px-8 py-3 tracking-wider hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors duration-300 cursor-pointer bg-transparent text-sm;
   }
 
   .nav-link {
@@ -54,7 +68,7 @@
   }
 
   .card {
-    @apply bg-[var(--color-card-bg)] border border-white/5 transition-colors duration-300;
+    @apply bg-[var(--color-card-bg)] border border-[var(--color-border)] transition-colors duration-300;
   }
 
   .card:hover {

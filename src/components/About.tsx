@@ -22,14 +22,14 @@ export default function About() {
             Designing Spaces. <br />
             <span className="text-[var(--color-accent)] italic font-serif">Building Souls.</span>
           </motion.h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-[var(--color-text-muted)]">
             At The Viraj, we believe great design isn't just about how a space looks — it's about how it feels.
           </p>
         </div>
       </section>
 
       {/* Story & Philosophy */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
+      <section className="py-24 px-6 bg-[var(--color-primary-bg)]">
         <div className="max-w-4xl mx-auto space-y-24">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export default function About() {
       </section>
 
       {/* Process */}
-      <section className="py-24 px-6 bg-[#141414]">
+      <section className="py-24 px-6 bg-[var(--color-card-bg)]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="mb-4">From Vision to Reality.</h2>
@@ -81,7 +81,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="relative p-6 border border-white/5 bg-[#0a0a0a] hover:border-[var(--color-accent)] transition-colors group"
+                className="relative p-6 border border-[var(--color-border)] bg-[var(--color-primary-bg)] hover:border-[var(--color-accent)] transition-colors group"
               >
                 <span className="text-3xl font-bold text-[var(--color-accent)]/20 mb-4 block group-hover:text-[var(--color-accent)] transition-colors">{item.step}</span>
                 <h3 className="text-base mb-3">{item.title}</h3>
@@ -93,7 +93,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
+      <section className="py-24 px-6 bg-[var(--color-primary-bg)]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-[var(--color-accent)] text-xs font-bold uppercase tracking-widest mb-4 block">The Team</span>
@@ -116,7 +116,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-[#141414] text-center">
+      <section className="py-24 px-6 bg-[var(--color-card-bg)] text-center">
         <h2 className="mb-6">Let's Build Something Beautiful Together.</h2>
         <p className="text-[var(--color-text-muted)] mb-8">Talk to our designers today and get a customized estimate for your space.</p>
         <Link to="/contact" className="btn-primary">Get Estimate</Link>

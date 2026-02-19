@@ -8,6 +8,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
+import ThankYou from './components/ThankYou';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -23,7 +24,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans selection:bg-[var(--color-accent)] selection:text-black">
+      <div className="min-h-screen flex flex-col bg-[var(--color-primary-bg)] text-[var(--color-text-primary)] font-sans selection:bg-[var(--color-accent)] selection:text-black transition-colors duration-300">
         <Navbar />
         <main className="flex-grow">
           <Routes>
@@ -32,6 +33,7 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
         </main>
         <Footer />

@@ -13,7 +13,7 @@ export default function Home() {
             filter: 'brightness(0.4)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[var(--color-primary-bg)]" />
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <motion.h1 
@@ -30,7 +30,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10"
+            className="text-base md:text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-10"
           >
             End-to-end interior design and renovation solutions — crafted with emotion, elegance, and precision.
           </motion.p>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* About Intro */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
+      <section className="py-24 px-6 bg-[var(--color-primary-bg)]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -61,7 +61,7 @@ export default function Home() {
             <p className="text-[var(--color-text-muted)] mb-6 text-base">
               At The Viraj, we believe great interiors are born from a deep understanding of your lifestyle. Our team of experts crafts beautiful, functional, and timeless spaces — whether you're building new, renovating, or simply refreshing your home.
             </p>
-            <Link to="/about" className="text-[var(--color-accent)] border-b border-[var(--color-accent)] pb-1 hover:text-white hover:border-white transition-colors text-sm uppercase tracking-widest font-semibold">
+            <Link to="/about" className="text-[var(--color-accent)] border-b border-[var(--color-accent)] pb-1 hover:text-[var(--color-text-primary)] hover:border-[var(--color-text-primary)] transition-colors text-sm uppercase tracking-widest font-semibold">
               Learn More About Us
             </Link>
           </motion.div>
@@ -79,16 +79,16 @@ export default function Home() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-[#1a1a1a] p-8 flex flex-col justify-center border border-white/5 z-10 hidden md:flex">
+            <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-[var(--color-secondary-bg)] p-8 flex flex-col justify-center border border-[var(--color-border)] z-10 hidden md:flex">
               <span className="text-4xl font-bold text-[var(--color-accent)] mb-2">10+</span>
-              <span className="text-sm text-gray-400 uppercase tracking-wider">Years of Excellence</span>
+              <span className="text-sm text-[var(--color-text-muted)] uppercase tracking-wider">Years of Excellence</span>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 px-6 bg-[#0f0f0f]">
+      <section className="py-24 px-6 bg-[var(--color-secondary-bg)]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-[var(--color-accent)] text-xs font-bold uppercase tracking-widest mb-4 block">Our Expertise</span>
@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="p-8">
                   <h3 className="text-lg mb-3">{service.title}</h3>
                   <p className="text-[var(--color-text-muted)] text-sm mb-6">{service.desc}</p>
-                  <Link to="/contact" className="text-[var(--color-accent)] text-xs uppercase tracking-widest font-bold hover:text-white transition-colors">
+                  <Link to="/contact" className="text-[var(--color-accent)] text-xs uppercase tracking-widest font-bold hover:text-[var(--color-text-primary)] transition-colors">
                     Get Estimate →
                   </Link>
                 </div>
@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
+      <section className="py-24 px-6 bg-[var(--color-primary-bg)]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
              <div className="aspect-square overflow-hidden rounded-sm relative">
@@ -171,7 +171,7 @@ export default function Home() {
                   className="flex items-start gap-4"
                 >
                   <span className="text-[var(--color-accent)] mt-1">✓</span>
-                  <p className="text-sm text-gray-300">{item}</p>
+                  <p className="text-sm text-[var(--color-text-muted)]">{item}</p>
                 </motion.li>
               ))}
             </ul>
@@ -180,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 px-6 bg-[#141414] text-center relative overflow-hidden">
+      <section className="py-32 px-6 bg-[var(--color-card-bg)] text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="relative z-10 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-6">Ready to Design Your Dream Space?</h2>

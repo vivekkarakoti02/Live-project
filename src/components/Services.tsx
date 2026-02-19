@@ -64,14 +64,14 @@ export default function Services() {
           >
             Our Services
           </motion.h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-[var(--color-text-muted)]">
             From concept to completion, we create interiors that inspire and endure.
           </p>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="py-24 px-6 bg-[#0a0a0a]">
+      <section className="py-24 px-6 bg-[var(--color-primary-bg)]">
         <div className="max-w-7xl mx-auto space-y-32">
           {services.map((service, idx) => (
             <motion.div 
@@ -88,7 +88,7 @@ export default function Services() {
                 <p className="text-[var(--color-text-muted)] mb-8 text-base">{service.desc}</p>
                 <ul className="space-y-3 mb-10">
                   {service.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="flex items-center gap-3 text-sm text-gray-300">
+                    <li key={fIdx} className="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
                       <span className="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full"></span>
                       {feature}
                     </li>
@@ -99,7 +99,7 @@ export default function Services() {
                 </Link>
               </div>
               <div className={idx % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <div className="aspect-[4/3] overflow-hidden rounded-sm border border-white/5">
+                <div className="aspect-[4/3] overflow-hidden rounded-sm border border-[var(--color-border)]">
                   <img 
                     src={service.img} 
                     alt={service.title} 
@@ -113,7 +113,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-[#141414] text-center">
+      <section className="py-24 px-6 bg-[var(--color-card-bg)] text-center">
         <h2 className="mb-6">Let's Bring Your Vision to Life</h2>
         <p className="text-[var(--color-text-muted)] mb-8">Schedule your free consultation and get a detailed estimate today.</p>
         <div className="flex justify-center gap-4">
